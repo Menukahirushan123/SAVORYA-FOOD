@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAVORYA | Artisan Culinary Kitchen & Gourmet Dining</title>
+  <meta name="description" content="Experience handcrafted gourmet dining, wood-fired pizzas, prime wagyu burgers, and Asian bowls. Order online for swift delivery or reserve your table.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-fire text-amber"></i> Special Offer: Use code <strong class="badge-code">YUMMY20</strong> for 20% off your first order!</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-regular fa-clock"></i> Open Daily: 11:00 AM – 11:00 PM</span>
+        <span class="divider">|</span>
+        <a href="tel:+18005557286"><i class="fa-solid fa-phone"></i> +1 (800) 555-SAVOR</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+        <span class="logo-text">SAVORYA<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#specials" class="nav-link">Specials</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Our Menu</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="#reservation" class="nav-link">Reservations</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Buttons -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button class="icon-btn" id="search-toggle-btn" title="Search Dishes" aria-label="Search Dishes">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Wishlist Button -->
+        <button class="icon-btn" id="wishlist-btn" title="Saved Favorites" aria-label="Favorites">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count" id="wishlist-count">0</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="cart-trigger-btn" id="cart-toggle-btn" title="View Cart" aria-label="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-btn-text">Cart</span>
+          <span class="badge-count" id="cart-count">0</span>
+        </button>
+
+        <!-- Reservation CTA Button -->
+        <a href="#reservation" class="btn btn-primary btn-sm nav-reserve-btn">
+          <i class="fa-regular fa-calendar-check"></i> Book Table
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Search Dropdown Bar (Hidden by default) -->
+    <div class="search-overlay-bar" id="search-overlay-bar">
+      <div class="container search-bar-inner">
+        <i class="fa-solid fa-magnifying-glass search-inner-icon"></i>
+        <input type="text" id="global-search-input" placeholder="Search wagyu burgers, truffle pizza, tonkotsu ramen, matcha tiramisu..." autocomplete="off">
+        <button class="clear-search-btn" id="clear-search-btn" title="Clear Search">&times;</button>
+        <button class="close-search-btn" id="close-search-btn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <!-- Hero Text Column -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="pulse-dot"></span>
+            <span>Artisan Kitchen & Gourmet Delivery</span>
+          </div>
+          <h1 class="hero-title">
+            Savor the Art of <span class="highlight-text">Culinary Passion</span>
+          </h1>
+          <p class="hero-description">
+            Experience handcrafted gourmet delicacies prepared with organic, farm-fresh ingredients. From dry-aged Wagyu smash burgers to authentic wood-fired Neapolitan pizzas, delivered fresh to your door in 30 minutes.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-bowl-food"></i> Explore Menu
+            </a>
+            <a href="#reservation" class="btn btn-secondary btn-lg">
+              <i class="fa-regular fa-calendar"></i> Book a Table
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">4.9<i class="fa-solid fa-star stat-star"></i></div>
+              <div class="stat-label">12,000+ Reviews</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">25 min</div>
+              <div class="stat-label">Average Delivery</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Organic & Fresh</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Column -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Delicious Gourmet Feast" class="hero-main-img">
+            
+            <!-- Floating Badge 1: Delivery Time -->
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon-box bg-orange">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <div class="badge-text-box">
+                <span class="badge-title">Express Delivery</span>
+                <span class="badge-sub">30 Mins Guaranteed</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Featured Dish Card -->
+            <div class="floating-badge badge-bottom-right">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=150&q=80" alt="Truffle Wagyu" class="mini-dish-img">
+              <div class="badge-text-box">
+                <span class="badge-title">Truffle Wagyu Burger</span>
+                <span class="badge-rating"><i class="fa-solid fa-star"></i> 4.9 (140+ orders)</span>
+                <span class="badge-price">$18.99</span>
+              </div>
+            </div>
+
+            <!-- Decorative Glow Rings -->
+            <div class="hero-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT PERKS BAR -->
+    <section class="features-bar">
+      <div class="container features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="feature-info">
+            <h4>100% Fresh Ingredients</h4>
+            <p>Locally sourced organic produce & free-range meats</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-fire-burner"></i></div>
+          <div class="feature-info">
+            <h4>Master Chefs</h4>
+            <p>Crafted by culinary artists with Michelin kitchen experience</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="feature-info">
+            <h4>Hot & Fast Delivery</h4>
+            <p>Temperature-controlled insulated eco-friendly packaging</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <div class="feature-info">
+            <h4>Hygiene & Quality First</h4>
+            <p>Strict safety standards and sanitized preparation kitchens</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODAY'S SPECIAL OFFERS -->
+    <section class="specials-section section-padding" id="specials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-fire text-amber"></i> Limited Time Delights</span>
+          <h2 class="section-title">Today's Chef Highlights & Offers</h2>
+          <p class="section-subtitle">Specially curated signature dishes featuring seasonal ingredients and exclusive discounts.</p>
+        </div>
+
+        <div class="specials-grid" id="specials-grid">
+          <!-- Dynamically populated via JS from MENU_ITEMS with discounts/specials -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FOOD MENU -->
+    <section class="menu-section section-padding" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-book-open"></i> Full Culinary Catalog</span>
+          <h2 class="section-title">Explore Our Artisan Menu</h2>
+          <p class="section-subtitle">Filter by your cravings, search for your favorite dish, or browse our chef-crafted selections.</p>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="menu-controls-wrapper">
+          <!-- Category Tabs -->
+          <div class="category-tabs" id="category-tabs" role="tablist">
+            <!-- Dynamically populated with category pills -->
+          </div>
+
+          <!-- Secondary Filters Row: Search, Dietary Filters, Sort Dropdown -->
+          <div class="secondary-filters-bar">
+            <!-- Search Input -->
+            <div class="filter-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="menu-search-input" placeholder="Search pizza, burger, ramen, salad..." autocomplete="off">
+              <button class="clear-btn" id="menu-clear-search" title="Clear text">&times;</button>
+            </div>
+
+            <!-- Dietary Quick Filter Toggles -->
+            <div class="dietary-filter-group">
+              <button class="dietary-chip active" data-diet="all">All</button>
+              <button class="dietary-chip" data-diet="veg"><i class="fa-solid fa-leaf"></i> Vegetarian</button>
+              <button class="dietary-chip" data-diet="spicy"><i class="fa-solid fa-pepper-hot"></i> Spicy</button>
+              <button class="dietary-chip" data-diet="glutenFree"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Gluten-Free</button>
+            </div>
+
+            <!-- Sort By Select -->
+            <div class="sort-box">
+              <label for="sort-select"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+              <select id="sort-select" class="custom-select">
+                <option value="recommended">Chef's Choice</option>
+                <option value="rating">Highest Rated</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="calories">Lowest Calories</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Indicator / Results Count -->
+        <div class="filter-status-bar">
+          <span id="results-count-text">Showing all items</span>
+          <button class="reset-filters-btn" id="reset-filters-btn" style="display: none;">
+            <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+          </button>
+        </div>
+
+        <!-- Menu Dishes Grid -->
+        <div class="dishes-grid" id="dishes-grid">
+          <!-- Dish cards dynamically injected here -->
+        </div>
+
+        <!-- Empty State (when search/filter returns nothing) -->
+        <div class="empty-state" id="empty-menu-state" style="display: none;">
+          <div class="empty-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>No culinary matches found</h3>
+          <p>We couldn't find any dishes matching your filters or search keywords.</p>
+          <button class="btn btn-primary" id="empty-reset-btn">Clear All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US / CULINARY PHILOSOPHY -->
+    <section class="about-section section-padding" id="about">
+      <div class="container about-container">
+        <div class="about-visuals">
+          <div class="about-image-card main-about-img">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Restaurant Interior & Kitchen">
+          </div>
+          <div class="about-image-card secondary-about-img">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Head Chef Plating Dishes">
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">15+</span>
+            <span class="exp-text">Years of Culinary Excellence</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-eyebrow"><i class="fa-solid fa-award"></i> The Savorya Tradition</span>
+          <h2 class="section-title">Where Culinary Heritage Meets Modern Innovation</h2>
+          <p class="about-lead">
+            Founded with a singular mission: to make restaurant-grade culinary artistry accessible without compromising on organic integrity or flavor authenticity.
+          </p>
+          <p class="about-text">
+            Every pizza dough is naturally fermented for 72 hours using imported Italian Petra flour. Our Wagyu beef is ethically grass-fed and dry-aged for 28 days. From simmering 24-hour Tonkotsu ramen broths to churning fresh pistachio mascarpone cream, no shortcuts are ever taken in our kitchen.
+          </p>
+
+          <div class="about-checkmarks">
+            <div class="check-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <h5>Zero Artificial Additives</h5>
+                <p>Pure, unadulterated flavors with seasonal farm produce.</p>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <h5>Biodegradable Packaging</h5>
+                <p>100% compostable boxes keeping your meal warm and the planet safe.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chef-quote-card">
+            <p class="quote-text">"Cooking is never merely about food—it is an intimate gesture of joy, hospitality, and shared memories."</p>
+            <div class="chef-profile">
+              <span class="chef-name">— Chef Mateo Laurent</span>
+              <span class="chef-title">Executive Culinary Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / REVIEWS -->
+    <section class="reviews-section section-padding" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow"><i class="fa-solid fa-heart text-amber"></i> Diners' Praise</span>
+          <h2 class="section-title">Loved by Thousands of Foodies</h2>
+          <p class="section-subtitle">Read unfiltered opinions from critics, regulars, and first-time guests.</p>
+        </div>
+
+        <div class="reviews-grid" id="reviews-grid">
+          <!-- Dynamically populated from REVIEWS in js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE RESERVATION SECTION -->
+    <section class="reservation-section section-padding" id="reservation">
+      <div class="container reservation-container">
+        <div class="reservation-card">
+          <div class="reservation-header">
+            <span class="section-eyebrow"><i class="fa-regular fa-calendar-check"></i> Dine With Us</span>
+            <h2 class="section-title">Book an Unforgettable Table</h2>
+            <p>Reserve an intimate dinner, outdoor patio evening, or family gathering. Instant confirmation guaranteed.</p>
+          </div>
+
+          <form id="reservation-form" class="reservation-form">
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="res-name"><i class="fa-solid fa-user"></i> Full Name *</label>
+                <input type="text" id="res-name" class="form-input" placeholder="e.g. Alexander Stone" required>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="res-phone"><i class="fa-solid fa-phone"></i> Phone Number *</label>
+                <input type="tel" id="res-phone" class="form-input" placeholder="e.g. (555) 234-5678" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="res-email"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+                <input type="email" id="res-email" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <!-- Number of Guests -->
+              <div class="form-group">
+                <label for="res-guests"><i class="fa-solid fa-user-group"></i> Party Size *</label>
+                <select id="res-guests" class="form-input custom-select" required>
+                  <option value="1">1 Person (Solo Dining)</option>
+                  <option value="2" selected>2 People (Romantic Date / Pair)</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People (Small Group)</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6 People (Family Table)</option>
+                  <option value="8">8+ People (Large Party)</option>
+                </select>
+              </div>
+
+              <!-- Date Picker -->
+              <div class="form-group">
+                <label for="res-date"><i class="fa-regular fa-calendar"></i> Date *</label>
+                <input type="date" id="res-date" class="form-input" required>
+              </div>
+
+              <!-- Time Slot -->
+              <div class="form-group">
+                <label for="res-time"><i class="fa-regular fa-clock"></i> Time Slot *</label>
+                <select id="res-time" class="form-input custom-select" required>
+                  <option value="12:00 PM">12:00 PM (Lunch)</option>
+                  <option value="1:00 PM">1:00 PM (Lunch)</option>
+                  <option value="2:30 PM">2:30 PM (Late Lunch)</option>
+                  <option value="5:30 PM">5:30 PM (Early Dinner)</option>
+                  <option value="6:30 PM">6:30 PM (Prime Dinner)</option>
+                  <option value="7:30 PM" selected>7:30 PM (Prime Dinner)</option>
+                  <option value="8:30 PM">8:30 PM (Evening)</option>
+                  <option value="9:30 PM">9:30 PM (Late Night)</option>
+                </select>
+              </div>
+
+              <!-- Seating Preference -->
+              <div class="form-group full-width">
+                <label><i class="fa-solid fa-chair"></i> Seating Preference</label>
+                <div class="seating-radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="seating" value="Main Dining Hall" checked>
+                    <span>Main Dining Hall</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="seating" value="Garden Patio">
+                    <span>Garden Patio (Outdoor)</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="seating" value="Romantic Booth">
+                    <span>Romantic Booth</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="seating" value="Chef Counter">
+                    <span>Chef's Counter</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="form-group full-width">
+                <label for="res-notes"><i class="fa-solid fa-comment-dots"></i> Dietary Notes & Special Occasions (Optional)</label>
+                <textarea id="res-notes" class="form-input textarea" rows="3" placeholder="Anniversary, birthday, food allergies, quiet table..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg res-submit-btn">
+              <i class="fa-solid fa-circle-check"></i> Complete Reservation
+            </button>
+          </form>
+        </div>
+
+        <!-- Reservation Sidebar / Hours Card -->
+        <div class="reservation-sidebar">
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h4>Private Dining & Celebrations</h4>
+            <p>Planning an executive dinner, wedding rehearsal, or milestone birthday? Our private mezzanine accommodates up to 45 guests.</p>
+            <a href="mailto:events@savorya.com" class="info-link">Inquire for Private Events &rarr;</a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <h4>Operating Schedule</h4>
+            <ul class="hours-list">
+              <li><span>Monday – Thursday:</span> <strong>11:30 AM – 10:30 PM</strong></li>
+              <li><span>Friday – Saturday:</span> <strong>11:00 AM – 11:30 PM</strong></li>
+              <li><span>Sunday Brunch & Dinner:</span> <strong>10:30 AM – 10:00 PM</strong></li>
+            </ul>
+          </div>
+
+          <div class="info-card highlight-card">
+            <div class="info-icon text-amber"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h4>Need Urgent Booking?</h4>
+            <p>For parties of 8+ or same-day reservations within 1 hour, please call our concierge directly.</p>
+            <a href="tel:+18005557286" class="btn btn-secondary btn-sm phone-btn">
+              <i class="fa-solid fa-phone"></i> +1 (800) 555-SAVOR
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / PROMO BANNER -->
+    <section class="newsletter-section">
+      <div class="container newsletter-box">
+        <div class="newsletter-content">
+          <span class="badge-discount"><i class="fa-solid fa-tag"></i> EXCLUSIVE SAVINGS</span>
+          <h3>Get 20% Off Your Next Gourmet Feast</h3>
+          <p>Subscribe to the Savorya Epicurean Club for secret off-menu items, VIP tasting invites, and instant 20% discount code.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-primary">Claim 20% Off</button>
+          </div>
+          <span class="newsletter-disclaimer">We respect your privacy. Unsubscribe anytime with one click.</span>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+          <span class="logo-text">SAVORYA<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">
+          Elevating casual and fine dining with sustainably farmed ingredients, wood-fired artisan cooking, and swift gourmet delivery.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#specials">Chef's Specials</a></li>
+          <li><a href="#menu">Menu & Ordering</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#reviews">Guest Reviews</a></li>
+          <li><a href="#reservation">Book a Table</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Cuisine Specialties</h4>
+        <ul class="footer-links">
+          <li><a href="#menu" data-category-target="burgers">Prime Wagyu Burgers</a></li>
+          <li><a href="#menu" data-category-target="pizzas">Neapolitan Sourdough Pizzas</a></li>
+          <li><a href="#menu" data-category-target="asian">Craft Tonkotsu Ramen</a></li>
+          <li><a href="#menu" data-category-target="salads">Organic Quinoa Bowls</a></li>
+          <li><a href="#menu" data-category-target="desserts">Artisanal Tiramisu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4 class="footer-title">Visit & Connect</h4>
+        <ul class="contact-details">
+          <li><i class="fa-solid fa-location-dot"></i> 482 Grand Culinary Way, Food District, NY 10012</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (800) 555-SAVOR (7286)</li>
+          <li><i class="fa-solid fa-envelope"></i> reservations@savorya.com</li>
+          <li><i class="fa-solid fa-clock"></i> Mon - Sun: 11:00 AM – 11:00 PM</li>
+        </ul>
+        <div class="payment-methods">
+          <span>We Accept:</span>
+          <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa" title="Visa"></i>
+            <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fa-brands fa-cc-amex" title="American Express"></i>
+            <i class="fa-brands fa-apple-pay" title="Apple Pay"></i>
+            <i class="fa-brands fa-google-pay" title="Google Pay"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 SAVORYA Artisan Kitchen & Bar. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Nutritional Transparency</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== OVERLAYS & MODALS ==================== -->
+
+  <!-- 1. SLIDE-OUT CART SIDEBAR -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Shopping Cart">
+    <!-- Cart Header -->
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Your Order (<span id="cart-items-total-qty">0</span>)</h3>
+      </div>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="free-delivery-tracker">
+      <div class="tracker-message" id="delivery-tracker-msg">
+        Add <strong>$35.00</strong> more to unlock <strong>FREE Delivery!</strong>
+      </div>
+      <div class="tracker-progress-track">
+        <div class="tracker-progress-fill" id="delivery-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Items dynamically injected here -->
+      <div class="empty-cart-state" id="empty-cart-state">
+        <div class="empty-cart-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+        <h4>Your basket is hungry</h4>
+        <p>Explore our menu and add something delicious to your order!</p>
+        <button class="btn btn-primary btn-sm" id="empty-cart-explore-btn">Browse Menu</button>
+      </div>
+    </div>
+
+    <!-- Cart Footer & Checkout Controls -->
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <!-- Promo Code Section -->
+      <div class="coupon-section">
+        <div class="coupon-input-group">
+          <input type="text" id="coupon-input" placeholder="Promo code (e.g. YUMMY20)" autocomplete="off">
+          <button class="btn-apply-coupon" id="btn-apply-coupon">Apply</button>
+        </div>
+        <!-- Active applied coupon tag -->
+        <div class="applied-coupon-tag" id="applied-coupon-tag" style="display: none;">
+          <span id="applied-coupon-text"><i class="fa-solid fa-tag"></i> <strong>YUMMY20</strong> applied</span>
+          <button id="remove-coupon-btn" title="Remove coupon">&times;</button>
+        </div>
+        <!-- Quick Promo Suggestions -->
+        <div class="quick-promos">
+          <span>Try:</span>
+          <button class="quick-promo-pill" data-code="YUMMY20">YUMMY20 (-20%)</button>
+          <button class="quick-promo-pill" data-code="FREESHIP">FREESHIP</button>
+        </div>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="order-summary-box">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-line" id="discount-row" style="display: none;">
+          <span class="text-green"><i class="fa-solid fa-tag"></i> Coupon Discount</span>
+          <span class="text-green" id="cart-discount">-$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Estimated Taxes (8%)</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery Fee</span>
+          <span id="cart-delivery">$3.99</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total</span>
+          <span id="cart-grand-total">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Action Button -->
+      <button class="btn btn-primary btn-block btn-lg checkout-btn" id="proceed-checkout-btn">
+        <span>Proceed to Checkout</span>
+        <span id="checkout-btn-total">$0.00</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- 2. QUICK VIEW ITEM MODAL -->
+  <div class="modal-backdrop" id="quickview-modal">
+    <div class="modal-card quickview-modal-card">
+      <button class="modal-close-btn" id="quickview-close-btn">&times;</button>
+      <div class="quickview-grid">
+        <div class="quickview-image-pane">
+          <img id="qv-image" src="" alt="Dish Preview">
+          <div class="qv-badge" id="qv-badge">Chef's Pick</div>
+        </div>
+        <div class="quickview-info-pane">
+          <div class="qv-header">
+            <h3 id="qv-title">Dish Title</h3>
+            <div class="qv-rating" id="qv-rating">
+              <i class="fa-solid fa-star"></i> <span>4.9 (120 reviews)</span>
+            </div>
+          </div>
+          <div class="qv-price-row">
+            <span class="qv-price" id="qv-price">$18.99</span>
+            <span class="qv-orig-price" id="qv-orig-price">$22.00</span>
+            <span class="qv-meta"><i class="fa-solid fa-fire text-amber"></i> <span id="qv-calories">820 kcal</span></span>
+            <span class="qv-meta"><i class="fa-regular fa-clock"></i> <span id="qv-preptime">15-20 min</span></span>
+          </div>
+
+          <p class="qv-description" id="qv-description">Description text goes here.</p>
+
+          <!-- Nutritional Breakdown -->
+          <div class="qv-nutrition-box">
+            <span class="nutrition-title">Macro Breakdown</span>
+            <div class="nutrition-grid">
+              <div class="macro-pill">
+                <span class="macro-label">Protein</span>
+                <span class="macro-value" id="qv-protein">38g</span>
+              </div>
+              <div class="macro-pill">
+                <span class="macro-label">Carbs</span>
+                <span class="macro-value" id="qv-carbs">52g</span>
+              </div>
+              <div class="macro-pill">
+                <span class="macro-label">Fat</span>
+                <span class="macro-value" id="qv-fat">24g</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ingredients List -->
+          <div class="qv-ingredients">
+            <span class="nutrition-title">Fresh Ingredients</span>
+            <div class="ingredient-tags" id="qv-ingredients-list">
+              <!-- Dynamically populated tags -->
+            </div>
+          </div>
+
+          <!-- Special Notes -->
+          <div class="qv-notes-group">
+            <label for="qv-special-notes">Kitchen Instructions (e.g. No onions, dressing on side):</label>
+            <input type="text" id="qv-special-notes" placeholder="Optional notes for our chef...">
+          </div>
+
+          <!-- Add to Cart Controls -->
+          <div class="qv-actions">
+            <div class="qty-stepper">
+              <button class="btn-qty" id="qv-qty-minus">-</button>
+              <span class="qty-number" id="qv-qty-val">1</span>
+              <button class="btn-qty" id="qv-qty-plus">+</button>
+            </div>
+            <button class="btn btn-primary qv-add-btn" id="qv-add-to-cart-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart — <span id="qv-add-total">$18.99</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkout-modal">
+    <div class="modal-card checkout-modal-card">
+      <button class="modal-close-btn" id="checkout-close-btn">&times;</button>
+      <div class="checkout-header">
+        <i class="fa-solid fa-credit-card text-amber"></i>
+        <h3>Secure Checkout & Delivery</h3>
+      </div>
+
+      <form id="checkout-form" class="checkout-form">
+        <div class="checkout-sections-grid">
+          <!-- Left: Customer Details -->
+          <div class="checkout-left">
+            <h4 class="checkout-subhead"><i class="fa-solid fa-location-dot"></i> 1. Delivery Details</h4>
+            
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="co-name">Full Name *</label>
+                <input type="text" id="co-name" class="form-input" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group flex-1">
+                <label for="co-phone">Phone Number *</label>
+                <input type="tel" id="co-phone" class="form-input" placeholder="(555) 000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="co-address">Street Address *</label>
+              <input type="text" id="co-address" class="form-input" placeholder="742 Evergreen Terrace, Apt 4B" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="co-city">City / District *</label>
+                <input type="text" id="co-city" class="form-input" placeholder="New York" value="New York" required>
+              </div>
+              <div class="form-group flex-1">
+                <label for="co-zip">Zip Code *</label>
+                <input type="text" id="co-zip" class="form-input" placeholder="10012" value="10012" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="co-instructions">Delivery Instructions</label>
+              <input type="text" id="co-instructions" class="form-input" placeholder="e.g. Ring doorbell, leave at door">
+            </div>
+
+            <h4 class="checkout-subhead mt-4"><i class="fa-solid fa-wallet"></i> 2. Payment Method</h4>
+            <div class="payment-selector">
+              <label class="pay-option active">
+                <input type="radio" name="payment_method" value="card" checked>
+                <div class="pay-option-content">
+                  <div class="pay-option-header">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <span>Credit / Debit Card</span>
+                  </div>
+                  <div class="pay-icons-mini">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                  </div>
+                </div>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="payment_method" value="apple_pay">
+                <div class="pay-option-content">
+                  <div class="pay-option-header">
+                    <i class="fa-brands fa-apple-pay"></i>
+                    <span>Apple / Google Pay</span>
+                  </div>
+                  <span class="pay-badge">Instant</span>
+                </div>
+              </label>
+
+              <label class="pay-option">
+                <input type="radio" name="payment_method" value="cod">
+                <div class="pay-option-content">
+                  <div class="pay-option-header">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <span>Cash on Delivery</span>
+                  </div>
+                  <span class="pay-badge">No Pre-pay</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Card inputs dummy simulation -->
+            <div class="card-details-box" id="card-fields">
+              <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" class="form-input" placeholder="4242 •••• •••• 4242" maxlength="19" value="4242 8492 1049 8832">
+              </div>
+              <div class="form-row">
+                <div class="form-group flex-1">
+                  <label>Expiry Date</label>
+                  <input type="text" class="form-input" placeholder="MM/YY" maxlength="5" value="09/28">
+                </div>
+                <div class="form-group flex-1">
+                  <label>CVC / CVV</label>
+                  <input type="password" class="form-input" placeholder="•••" maxlength="4" value="789">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Mini Order Review -->
+          <div class="checkout-right">
+            <h4 class="checkout-subhead"><i class="fa-solid fa-receipt"></i> Order Summary</h4>
+            <div class="co-items-list" id="co-items-list">
+              <!-- Dynamically populated -->
+            </div>
+            <div class="co-pricing-breakdown">
+              <div class="co-line"><span>Subtotal</span><span id="co-subtotal">$0.00</span></div>
+              <div class="co-line text-green" id="co-discount-row" style="display: none;"><span>Discount</span><span id="co-discount">-$0.00</span></div>
+              <div class="co-line"><span>Taxes (8%)</span><span id="co-tax">$0.00</span></div>
+              <div class="co-line"><span>Delivery</span><span id="co-delivery">$3.99</span></div>
+              <div class="co-line co-grand-total"><span>Total to Pay</span><span id="co-total">$0.00</span></div>
+            </div>
+
+            <div class="co-security-note">
+              <i class="fa-solid fa-lock text-green"></i> 256-bit Bank Grade Encrypted Transaction
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg mt-3" id="co-submit-order-btn">
+              <span id="co-btn-label"><i class="fa-solid fa-lock"></i> Authorize & Place Order</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. ORDER CONFIRMED MODAL -->
+  <div class="modal-backdrop" id="order-success-modal">
+    <div class="modal-card order-success-card text-center">
+      <div class="success-icon-wrap">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2>Order Placed Successfully!</h2>
+      <p class="success-sub">Thank you for dining with Savorya. Our kitchen has received your order and started cooking.</p>
+
+      <div class="order-id-badge">
+        <span>Order Reference:</span>
+        <strong id="confirmed-order-id">#SAV-94812</strong>
+      </div>
+
+      <!-- Live Order Tracker Simulation -->
+      <div class="tracker-steps">
+        <div class="track-step active">
+          <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+          <span class="step-label">Received</span>
+        </div>
+        <div class="track-step active pulse">
+          <div class="step-circle"><i class="fa-solid fa-fire-burner"></i></div>
+          <span class="step-label">In Kitchen</span>
+        </div>
+        <div class="track-step">
+          <div class="step-circle"><i class="fa-solid fa-motorcycle"></i></div>
+          <span class="step-label">Out for Delivery</span>
+        </div>
+        <div class="track-step">
+          <div class="step-circle"><i class="fa-solid fa-house"></i></div>
+          <span class="step-label">Enjoy!</span>
+        </div>
+      </div>
+
+      <div class="delivery-eta-card">
+        <i class="fa-regular fa-clock text-amber"></i>
+        <div>
+          <span>Estimated Delivery Time:</span>
+          <strong>25 – 35 Minutes</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="close-success-modal-btn">Continue Exploring Savorya</button>
+    </div>
+  </div>
+
+  <!-- 5. RESERVATION CONFIRMED MODAL -->
+  <div class="modal-backdrop" id="reservation-success-modal">
+    <div class="modal-card reservation-success-card text-center">
+      <div class="success-icon-wrap bg-green">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <h2>Table Reserved!</h2>
+      <p class="success-sub">We have secured your table at Savorya. A confirmation SMS and email have been dispatched.</p>
+
+      <div class="res-details-box" id="res-confirmed-details">
+        <!-- Injected via JS -->
+      </div>
+
+      <button class="btn btn-primary" id="close-res-modal-btn">Awesome, See You Soon!</button>
+    </div>
+  </div>
+
+  <!-- 6. WISHLIST MODAL -->
+  <div class="modal-backdrop" id="wishlist-modal">
+    <div class="modal-card wishlist-modal-card">
+      <button class="modal-close-btn" id="wishlist-close-btn">&times;</button>
+      <div class="modal-head">
+        <i class="fa-solid fa-heart text-amber"></i>
+        <h3>Your Saved Favorites (<span id="modal-wishlist-count">0</span>)</h3>
+      </div>
+      <div class="wishlist-items-container" id="wishlist-items-container">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION SYSTEM -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
